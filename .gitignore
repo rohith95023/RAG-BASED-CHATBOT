@@ -37,6 +37,8 @@ ENV/
 data/
 *.faiss
 *.pkl
+backend/models/embeddings/
+backend/backend/uploads/
 
 # Environment
 .env
