@@ -5,6 +5,9 @@
   padding: var(--space-6);
   min-width: 0;
   min-height: 0;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.06), transparent 18%),
+    radial-gradient(circle at 12% 10%, rgba(31, 103, 216, 0.05), transparent 20%);
 }
 
 .page-hero {
@@ -31,7 +34,7 @@
   display: grid;
   place-items: center;
   font-size: 22px;
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 18px 30px rgba(31, 103, 216, 0.18);
   flex-shrink: 0;
 }
 
@@ -57,13 +60,14 @@
 
 .page-button {
   border: 1px solid var(--border-color);
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--text-primary);
   border-radius: var(--radius-md);
   padding: 0.7rem 1rem;
   cursor: pointer;
   font-weight: var(--font-weight-semibold);
   transition: all var(--transition-base);
+  backdrop-filter: blur(16px);
 }
 
 .page-button:hover {
@@ -97,10 +101,11 @@
 
 .stat-card,
 .section-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(18px);
 }
 
 .stat-card {
@@ -222,7 +227,7 @@
   padding: var(--space-5);
   border: 1px dashed var(--border-color);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .toggle {
@@ -278,7 +283,7 @@
 .setting-select {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--text-primary);
   padding: 0.6rem 0.8rem;
 }
@@ -291,8 +296,8 @@
   min-width: 60px;
   padding: 0.35rem 0.5rem;
   border-radius: var(--radius-sm);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   color: var(--text-primary);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   text-align: center;

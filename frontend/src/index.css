@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* ============================================
    PROFESSIONAL CORPORATE DESIGN SYSTEM
@@ -8,28 +8,28 @@
   /* Color Palette - Professional & Corporate */
 
   /* Primary Colors - Navy Blue Gradient */
-  --color-primary-50: #EFF6FF;
-  --color-primary-100: #DBEAFE;
-  --color-primary-200: #BFDBFE;
-  --color-primary-300: #93C5FD;
-  --color-primary-400: #60A5FA;
-  --color-primary-500: #3B82F6;
-  --color-primary-600: #2563EB;
-  --color-primary-700: #1D4ED8;
-  --color-primary-800: #1E40AF;
-  --color-primary-900: #1E3A8A;
+  --color-primary-50: #eef8ff;
+  --color-primary-100: #d9eeff;
+  --color-primary-200: #b9defe;
+  --color-primary-300: #89c4fb;
+  --color-primary-400: #56a5f6;
+  --color-primary-500: #2f7eea;
+  --color-primary-600: #1f67d8;
+  --color-primary-700: #184fb0;
+  --color-primary-800: #123b85;
+  --color-primary-900: #0c2a61;
 
   /* Secondary Colors - Slate Blue */
-  --color-secondary-50: #F8FAFC;
-  --color-secondary-100: #F1F5F9;
-  --color-secondary-200: #E2E8F0;
-  --color-secondary-300: #CBD5E1;
-  --color-secondary-400: #94A3B8;
-  --color-secondary-500: #64748B;
-  --color-secondary-600: #475569;
-  --color-secondary-700: #334155;
-  --color-secondary-800: #1E293B;
-  --color-secondary-900: #0F172A;
+  --color-secondary-50: #f7fafc;
+  --color-secondary-100: #eef3f8;
+  --color-secondary-200: #dde5ee;
+  --color-secondary-300: #c2cfdd;
+  --color-secondary-400: #98a8bb;
+  --color-secondary-500: #6f8095;
+  --color-secondary-600: #526174;
+  --color-secondary-700: #364252;
+  --color-secondary-800: #1f2937;
+  --color-secondary-900: #0f172a;
 
   /* Success Colors - Professional Green */
   --color-success-50: #ECFDF5;
@@ -80,10 +80,11 @@
   --color-accent-900: #78350F;
 
   /* Semantic Color Variables */
-  --bg-app: var(--color-secondary-50);
-  --bg-surface: #FFFFFF;
-  --bg-hover: var(--color-secondary-100);
-  --bg-active: var(--color-primary-50);
+  --bg-app: #f3f7fb;
+  --bg-surface: rgba(255, 255, 255, 0.86);
+  --bg-surface-solid: #ffffff;
+  --bg-hover: rgba(31, 103, 216, 0.08);
+  --bg-active: rgba(31, 103, 216, 0.12);
 
   --text-primary: var(--color-secondary-900);
   --text-secondary: var(--color-secondary-600);
@@ -111,10 +112,12 @@
   --accent-light: var(--color-accent-100);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-800) 0%, var(--color-secondary-600) 100%);
-  --gradient-success: linear-gradient(135deg, var(--color-success-700) 0%, var(--color-success-500) 100%);
-  --gradient-subtle: linear-gradient(180deg, var(--color-secondary-50) 0%, var(--color-secondary-100) 100%);
+  --gradient-primary: linear-gradient(135deg, #123b85 0%, #1f67d8 50%, #38bdf8 100%);
+  --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  --gradient-success: linear-gradient(135deg, var(--color-success-700) 0%, #22c55e 100%);
+  --gradient-subtle: radial-gradient(circle at top left, rgba(31, 103, 216, 0.12), transparent 34%),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 32%),
+    linear-gradient(180deg, #f8fbfe 0%, #eef4f9 100%);
 
   /* Spacing System */
   --space-1: 4px;
@@ -137,7 +140,7 @@
   --content-padding-xl: 48px;
 
   /* Typography System - Corporate Professional */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -223,7 +226,10 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-app);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(31, 103, 216, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(56, 189, 248, 0.08), transparent 25%),
+    linear-gradient(180deg, #f8fbfe 0%, #edf3f8 100%);
   color: var(--text-primary);
   line-height: var(--line-height-normal);
   overflow: hidden; /* Prevent body scroll, let containers handle it */
@@ -247,16 +253,36 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background: var(--gradient-subtle);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(31, 103, 216, 0.15), transparent 24%),
+    radial-gradient(circle at 82% 24%, rgba(56, 189, 248, 0.12), transparent 20%),
+    var(--gradient-subtle);
+  position: relative;
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), transparent 80%);
+  opacity: 0.14;
 }
 
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-app);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.68)),
+    var(--bg-app);
   overflow: hidden;
   position: relative;
+  backdrop-filter: blur(18px);
 }
 
 /* ============================================
@@ -349,7 +375,7 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(31, 103, 216, 0.12);
 }
 
 input::placeholder,
@@ -365,6 +391,7 @@ textarea::placeholder {
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   transition: all var(--transition-base);
+  backdrop-filter: blur(18px);
 }
 
 .card:hover {
@@ -419,7 +446,7 @@ textarea::placeholder {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-hover);
+  background: linear-gradient(180deg, rgba(31, 103, 216, 0.42), rgba(56, 189, 248, 0.42));
   border-radius: var(--radius-full);
   transition: background var(--transition-fast);
 }
@@ -442,8 +469,8 @@ textarea::placeholder {
    ============================================ */
 
 ::selection {
-  background: var(--primary-light);
-  color: var(--primary);
+  background: rgba(31, 103, 216, 0.16);
+  color: var(--primary-800);
 }
 
 /* ============================================

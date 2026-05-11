@@ -13,6 +13,9 @@
   animation: fadeInUp 0.3s ease-out;
   min-width: 0; /* Prevents flex items from overflowing */
   max-width: 100%;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.06), transparent 18%),
+    radial-gradient(circle at 20% 10%, rgba(31, 103, 216, 0.05), transparent 20%);
 }
 
 /* Hero Section */
@@ -61,12 +64,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.84);
   cursor: pointer;
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
   padding: var(--space-8);
+  backdrop-filter: blur(18px);
+  border-color: rgba(255, 255, 255, 0.82);
 }
 
 .upload-dropzone::before {
@@ -169,8 +174,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  background: var(--bg-surface);
-  border: 2px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: var(--radius-lg);
   padding: var(--space-4);
   margin-bottom: var(--space-6);
@@ -178,6 +183,7 @@
   max-width: 600px;
   animation: slideInRight 0.4s ease-out;
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
 }
 
 .upload-file-preview.selected {
@@ -272,14 +278,14 @@
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
   font-family: inherit;
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.9);
   transition: all var(--transition-base);
 }
 
 .upload-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(31, 103, 216, 0.12);
 }
 
 .upload-input::placeholder {
@@ -290,7 +296,7 @@
 .upload-progress {
   width: 100%;
   height: 8px;
-  background: var(--bg-hover);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: var(--radius-full);
   overflow: hidden;
   margin-top: var(--space-2);
@@ -376,9 +382,9 @@
 }
 
 .upload-button-secondary {
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--text-primary);
-  border: 2px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: var(--shadow-sm);
 }
 
@@ -444,13 +450,14 @@
 }
 
 .upload-recent-item {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   transition: all var(--transition-base);
   cursor: pointer;
   animation: fadeIn 0.3s ease-out backwards;
+  backdrop-filter: blur(16px);
 }
 
 .upload-recent-item:hover {

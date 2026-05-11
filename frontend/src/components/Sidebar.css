@@ -4,8 +4,9 @@
 
 .sidebar {
   width: var(--sidebar-width);
-  background: var(--bg-surface);
-  border-right: 1px solid var(--border-color);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 251, 255, 0.82));
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
   padding: var(--space-4); /* Reduced from var(--space-6) */
@@ -16,6 +17,8 @@
   position: relative;
   z-index: var(--z-sticky);
   min-width: 0; /* Prevents flex items from overflowing */
+  backdrop-filter: blur(20px);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.7);
 }
 
 .sidebar-nav {
@@ -33,16 +36,20 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-3);
+  padding: var(--space-4);
   margin-bottom: var(--space-8);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
   cursor: pointer;
+  background: linear-gradient(135deg, rgba(31, 103, 216, 0.06), rgba(56, 189, 248, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-sm);
 }
 
 .sidebar-logo:hover {
-  background: var(--bg-hover);
-  transform: translateX(4px);
+  background: linear-gradient(135deg, rgba(31, 103, 216, 0.09), rgba(56, 189, 248, 0.08));
+  transform: translateX(4px) translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .sidebar-logo-icon {
@@ -65,19 +72,20 @@
 }
 
 .sidebar-logo-text {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: var(--font-weight-bold);
   color: var(--text-primary);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   white-space: nowrap;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .sidebar-logo-subtitle {
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   color: var(--text-tertiary);
   margin-top: 4px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -122,6 +130,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: var(--space-1);
+  border: 1px solid transparent;
 }
 
 .sidebar-item::before {
@@ -138,9 +147,10 @@
 }
 
 .sidebar-item:hover {
-  background: var(--bg-hover);
+  background: rgba(31, 103, 216, 0.08);
   color: var(--text-primary);
   transform: translateX(4px);
+  border-color: rgba(31, 103, 216, 0.08);
 }
 
 .sidebar-item:hover::before {
@@ -148,9 +158,11 @@
 }
 
 .sidebar-item.active {
-  background: var(--primary-light);
-  color: var(--primary);
+  background: linear-gradient(135deg, rgba(31, 103, 216, 0.14), rgba(56, 189, 248, 0.08));
+  color: var(--primary-700);
   font-weight: var(--font-weight-semibold);
+  border-color: rgba(31, 103, 216, 0.12);
+  box-shadow: 0 8px 18px rgba(31, 103, 216, 0.08);
 }
 
 .sidebar-item.active::before {
@@ -212,7 +224,7 @@
 /* User Section */
 .sidebar-user {
   padding: var(--space-4);
-  background: var(--bg-hover);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(31, 103, 216, 0.05));
   border-radius: var(--radius-md);
   margin-top: auto;
   display: flex;
@@ -221,12 +233,13 @@
   cursor: pointer;
   transition: all var(--transition-base);
   animation: fadeInUp 0.4s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .sidebar-user:hover {
-  background: var(--border-color);
+  background: linear-gradient(135deg, rgba(31, 103, 216, 0.08), rgba(56, 189, 248, 0.05));
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .sidebar-user-avatar {
@@ -339,8 +352,8 @@
   top: 80px;
   width: 24px;
   height: 24px;
-  background: var(--bg-surface);
-  border: 2px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.75);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -349,6 +362,7 @@
   transition: all var(--transition-base);
   z-index: var(--z-dropdown);
   color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
 }
 
 .sidebar-collapse:hover {
@@ -398,6 +412,7 @@
     width: 280px;
     max-width: 80vw;
     padding: var(--space-4);
+    box-shadow: var(--shadow-2xl);
   }
 
   .sidebar.open {

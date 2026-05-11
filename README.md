@@ -27,9 +27,11 @@ FLASH MAN is a local-first PDF RAG chatbot. It lets you upload documents, search
 ```text
 project/
 ├── backend/
+│   ├── models/       # ML models (ignored in Git)
+│   ├── data/         # Application data
+│   ├── services/     # Logic & Services
+│   └── ...
 ├── frontend/
-├── models/
-├── data/
 └── logs/
 ```
 
@@ -43,11 +45,18 @@ project/
 
 ## Local Setup
 
-1. Install backend dependencies.
-2. Install frontend dependencies with `npm install` in `frontend/`.
-3. Configure `.env`.
-4. Start the backend.
-5. Start the frontend.
+### Backend
+1. Navigate to the backend directory: `cd backend`
+2. Create and activate a virtual environment.
+3. Install dependencies: `pip install -r requirements.txt`
+4. Configure your `.env` file based on `.env.example`.
+5. Start the server: `uvicorn main:app --reload`
+   > **Note:** The embedding model weight files (~86MB) will automatically download from HuggingFace on the first run and cache in `backend/models/embeddings/`.
+
+### Frontend
+1. Navigate to the frontend directory: `cd frontend`
+2. Install dependencies: `npm install`
+3. Start the dev server: `npm run dev`
 
 ## Notes
 

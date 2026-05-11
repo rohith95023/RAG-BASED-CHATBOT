@@ -6,7 +6,10 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--bg-app);
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.05), transparent 18%),
+    radial-gradient(circle at 15% 10%, rgba(31, 103, 216, 0.05), transparent 20%),
+    var(--bg-app);
   animation: fadeIn 0.2s ease-out;
   overflow: hidden;
   min-width: 0; /* Prevents flex items from overflowing */
@@ -15,14 +18,15 @@
 
 /* Header */
 .document-header {
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.84);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   padding: var(--space-4) var(--space-6); /* Reduced vertical padding for more space */
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow-sm);
   animation: fadeInDown 0.2s ease-out;
+  backdrop-filter: blur(18px);
 }
 
 .header-left {
@@ -131,8 +135,8 @@
 
 /* Bulk Actions Bar */
 .bulk-actions-bar {
-  background: var(--primary-light);
-  border-bottom: 1px solid var(--primary);
+  background: linear-gradient(135deg, rgba(31, 103, 216, 0.14), rgba(56, 189, 248, 0.08));
+  border-bottom: 1px solid rgba(31, 103, 216, 0.16);
   padding: var(--space-3) var(--space-6);
   display: flex;
   justify-content: space-between;
@@ -140,6 +144,7 @@
   animation: fadeInDown 0.3s ease-out;
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
   z-index: 10;
+  backdrop-filter: blur(16px);
 }
 
 .selection-info {
@@ -197,10 +202,11 @@
 /* Selection Header */
 .selection-header {
   padding: var(--space-2) var(--space-6);
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.82);
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
+  backdrop-filter: blur(16px);
 }
 
 .select-all-label {
@@ -229,9 +235,10 @@
 /* Filters */
 .document-filters {
   padding: var(--space-4) var(--space-6);
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.82);
   border-bottom: 1px solid var(--border-color);
   animation: fadeIn 0.5s ease-out 0.1s backwards;
+  backdrop-filter: blur(16px);
 }
 
 .search-bar {
@@ -246,13 +253,13 @@
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
   transition: all var(--transition-base);
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(31, 103, 216, 0.12);
 }
 
 .search-icon {
@@ -295,7 +302,7 @@
 }
 
 .category-option {
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.88);
   border: 2px solid var(--border-color);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-full);
@@ -342,6 +349,8 @@
   align-content: start;
   animation: fadeIn 0.3s ease-out 0.1s backwards;
   max-width: 100%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%);
 }
 
 .document-grid::-webkit-scrollbar {
@@ -349,7 +358,7 @@
 }
 
 .document-grid::-webkit-scrollbar-track {
-  background: var(--bg-hover);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .document-grid::-webkit-scrollbar-thumb {
@@ -411,6 +420,13 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: var(--space-4);
+}
+
+.document-card,
+.document-skeleton {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
 }
 
 .retry-button {
