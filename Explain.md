@@ -100,7 +100,7 @@ This is the memory of the app.
 
 ### Vector Search
 
-Vector search is handled by FAISS.
+Vector search is handled by FAISS(Facebook AI Similarity Search).
 
 This is what makes document lookup fast.
 
@@ -147,7 +147,7 @@ Why?
 - smaller pieces fit model limits better
 - retrieval works better on chunks than on full documents
 
-### Step 4: Create Embeddings
+### Step 4: Create Embeddings - (all-MiniLM-L6-v2), (bge-small-en), (text-embedding-3-small), (OpenAi), (Lamma) ETC...............
 
 Each chunk is converted into an embedding.
 
@@ -492,3 +492,82 @@ Think of FLASH MAN like this:
 - LLM = the writer of the final answer
 
 That is the whole project in one picture.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 21. Libraries Used by Area
+
+Here is a simple list of the main libraries and where they are used.
+
+### Frontend Area
+
+- `react` - builds the user interface.
+- `react-dom` - connects React to the browser DOM.
+- `vite` - starts the frontend dev server and builds the app.
+- `axios` - sends API requests from the frontend to the backend.
+
+### Backend Area
+
+- `fastapi` - creates the API server.
+- `uvicorn` - runs the FastAPI app.
+- `pydantic` - validates request and response data.
+- `pydantic-settings` - loads configuration from environment settings.
+- `python-dotenv` - reads values from `.env` files.
+- `aiofiles` - handles async file operations.
+- `python-multipart` - supports file upload forms.
+
+### Database Area
+
+- `motor` - async MongoDB driver.
+- `pymongo` - MongoDB client library used for database work.
+- `mongodb atlas` - cloud database service used to store app data.
+
+### AI and Search Area
+
+- `sentence-transformers` - turns text into embeddings.
+- `faiss-cpu` - searches embeddings by similarity.
+- `google-genai` - connects to the Gemini-style model service layer.
+- `numpy` - supports numeric arrays used in vector work.
+
+### PDF and Document Area
+
+- `pymupdf` - reads text from PDF files.
+- `openpyxl` - reads and writes Excel files when needed.
+- `xlrd` - reads older Excel files.
+- `striprtf` - reads RTF documents.
+
+### Authentication Area
+
+- `python-jose` - handles token work such as JWT.
+- `passlib` - hashes and checks passwords safely.
+
+### Testing and Development Area
+
+- `pytest` - runs tests.
+- `pytest-asyncio` - tests async code.
+- `httpx` - makes HTTP test requests.
+- `eslint` - checks frontend JavaScript and React code.
+
+### Logging and Monitoring Area
+
+- `structlog` - gives structured logging in the backend.
+
+## 22. What Happens When the App Starts
+
+This is the startup flow in simple order:
+
+1. The backend server starts first.
+2. FastAPI creates the app and loads configuration.
+3. CORS is set so the frontend can talk to the backend.
+4. The backend connects to MongoDB.
+5. The backend initializes services like PDF handling, embeddings, vector search, and chat support.
+6. The API routes are registered.
+7. The backend exposes endpoints like `/`, `/health`, `/stats`, `/documents`, and `/chat`.
+8. The frontend starts with Vite and loads the React app in the browser.
+9. The frontend calls the backend to check health, load documents, and restore app state.
+10. When the user uploads a PDF or asks a question, the request goes through the backend pipeline.
+11. The backend reads the file, extracts text, creates chunks, builds embeddings, searches FAISS, and asks the model to generate an answer.
+12. The frontend shows the answer, sources, history, and any status updates.
+
+So the app starts with setup first, then data loading, then chat interaction.
