@@ -5,86 +5,86 @@
    ============================================ */
 
 :root {
-  /* Color Palette - Professional & Corporate */
+  /* Color Palette - Bright, Classy, Light */
 
-  /* Primary Colors - Navy Blue Gradient */
-  --color-primary-50: #eef8ff;
-  --color-primary-100: #d9eeff;
-  --color-primary-200: #b9defe;
-  --color-primary-300: #89c4fb;
-  --color-primary-400: #56a5f6;
-  --color-primary-500: #2f7eea;
-  --color-primary-600: #1f67d8;
-  --color-primary-700: #184fb0;
-  --color-primary-800: #123b85;
-  --color-primary-900: #0c2a61;
+  /* Primary Colors - Sky Blue to Aqua */
+  --color-primary-50: #effbff;
+  --color-primary-100: #d8f4ff;
+  --color-primary-200: #b6e9ff;
+  --color-primary-300: #86d8ff;
+  --color-primary-400: #54c1ff;
+  --color-primary-500: #26a6f7;
+  --color-primary-600: #1586ea;
+  --color-primary-700: #1068c4;
+  --color-primary-800: #114f9a;
+  --color-primary-900: #123d74;
 
-  /* Secondary Colors - Slate Blue */
-  --color-secondary-50: #f7fafc;
-  --color-secondary-100: #eef3f8;
-  --color-secondary-200: #dde5ee;
-  --color-secondary-300: #c2cfdd;
-  --color-secondary-400: #98a8bb;
-  --color-secondary-500: #6f8095;
-  --color-secondary-600: #526174;
-  --color-secondary-700: #364252;
-  --color-secondary-800: #1f2937;
-  --color-secondary-900: #0f172a;
+  /* Secondary Colors - Soft Indigo */
+  --color-secondary-50: #f7f8ff;
+  --color-secondary-100: #eef0ff;
+  --color-secondary-200: #dee3ff;
+  --color-secondary-300: #c4ccff;
+  --color-secondary-400: #a0a8f8;
+  --color-secondary-500: #7f87e6;
+  --color-secondary-600: #646bcb;
+  --color-secondary-700: #4c52a6;
+  --color-secondary-800: #35397d;
+  --color-secondary-900: #25294f;
 
-  /* Success Colors - Professional Green */
-  --color-success-50: #ECFDF5;
-  --color-success-100: #D1FAE5;
-  --color-success-200: #A7F3D0;
-  --color-success-300: #6EE7B7;
-  --color-success-400: #34D399;
-  --color-success-500: #10B981;
-  --color-success-600: #059669;
-  --color-success-700: #047857;
-  --color-success-800: #065F46;
-  --color-success-900: #064E3B;
+  /* Success Colors - Mint */
+  --color-success-50: #effdf8;
+  --color-success-100: #d9faef;
+  --color-success-200: #b6f3df;
+  --color-success-300: #81eabf;
+  --color-success-400: #44d99b;
+  --color-success-500: #1fcf89;
+  --color-success-600: #12ae73;
+  --color-success-700: #0f8a5b;
+  --color-success-800: #0f6c49;
+  --color-success-900: #0e563c;
 
-  /* Warning Colors - Corporate Amber */
-  --color-warning-50: #FFFBEB;
-  --color-warning-100: #FEF3C7;
-  --color-warning-200: #FDE68A;
-  --color-warning-300: #FCD34D;
-  --color-warning-400: #FBBF24;
-  --color-warning-500: #F59E0B;
-  --color-warning-600: #D97706;
-  --color-warning-700: #B45309;
-  --color-warning-800: #92400E;
-  --color-warning-900: #78350F;
+  /* Warning Colors - Warm Gold */
+  --color-warning-50: #fff9ec;
+  --color-warning-100: #fff1cc;
+  --color-warning-200: #ffe39a;
+  --color-warning-300: #ffd25f;
+  --color-warning-400: #ffc238;
+  --color-warning-500: #f5a800;
+  --color-warning-600: #d88a00;
+  --color-warning-700: #b36b00;
+  --color-warning-800: #8c5100;
+  --color-warning-900: #6d3f00;
 
-  /* Error Colors - Business Red */
-  --color-error-50: #FEF2F2;
-  --color-error-100: #FEE2E2;
-  --color-error-200: #FECACA;
-  --color-error-300: #FCA5A5;
-  --color-error-400: #F87171;
-  --color-error-500: #EF4444;
-  --color-error-600: #DC2626;
-  --color-error-700: #B91C1C;
-  --color-error-800: #991B1B;
-  --color-error-900: #7F1D1D;
+  /* Error Colors - Coral */
+  --color-error-50: #fff1f2;
+  --color-error-100: #ffe0e3;
+  --color-error-200: #ffc7cf;
+  --color-error-300: #ffa0b0;
+  --color-error-400: #ff708f;
+  --color-error-500: #ff4d73;
+  --color-error-600: #eb335c;
+  --color-error-700: #bf2047;
+  --color-error-800: #931b3d;
+  --color-error-900: #731934;
 
-  /* Accent Colors - Subtle Gold */
-  --color-accent-50: #FFFBEB;
-  --color-accent-100: #FEF3C7;
-  --color-accent-200: #FDE68A;
-  --color-accent-300: #FCD34D;
-  --color-accent-400: #FBBF24;
-  --color-accent-500: #F59E0B;
-  --color-accent-600: #D97706;
-  --color-accent-700: #B45309;
-  --color-accent-800: #92400E;
-  --color-accent-900: #78350F;
+  /* Accent Colors - Peach */
+  --color-accent-50: #fff4ec;
+  --color-accent-100: #ffe6d4;
+  --color-accent-200: #ffccad;
+  --color-accent-300: #ffad7d;
+  --color-accent-400: #ff8c52;
+  --color-accent-500: #ff6b2b;
+  --color-accent-600: #f24f1d;
+  --color-accent-700: #c93b16;
+  --color-accent-800: #9c2f17;
+  --color-accent-900: #7a2919;
 
   /* Semantic Color Variables */
-  --bg-app: #f3f7fb;
-  --bg-surface: rgba(255, 255, 255, 0.86);
+  --bg-app: #f7f9ff;
+  --bg-surface: rgba(255, 255, 255, 0.88);
   --bg-surface-solid: #ffffff;
-  --bg-hover: rgba(31, 103, 216, 0.08);
-  --bg-active: rgba(31, 103, 216, 0.12);
+  --bg-hover: rgba(22, 134, 234, 0.08);
+  --bg-active: rgba(22, 134, 234, 0.12);
 
   --text-primary: var(--color-secondary-900);
   --text-secondary: var(--color-secondary-600);
@@ -112,12 +112,13 @@
   --accent-light: var(--color-accent-100);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #123b85 0%, #1f67d8 50%, #38bdf8 100%);
-  --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-  --gradient-success: linear-gradient(135deg, var(--color-success-700) 0%, #22c55e 100%);
-  --gradient-subtle: radial-gradient(circle at top left, rgba(31, 103, 216, 0.12), transparent 34%),
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 32%),
-    linear-gradient(180deg, #f8fbfe 0%, #eef4f9 100%);
+  --gradient-primary: linear-gradient(135deg, #1262d6 0%, #26a6f7 48%, #6ce6ff 100%);
+  --gradient-secondary: linear-gradient(135deg, #5b5fe5 0%, #7e78ff 50%, #b38dff 100%);
+  --gradient-success: linear-gradient(135deg, #12ae73 0%, #32d88e 100%);
+  --gradient-subtle: radial-gradient(circle at top left, rgba(22, 134, 234, 0.12), transparent 34%),
+    radial-gradient(circle at top right, rgba(255, 107, 43, 0.1), transparent 32%),
+    radial-gradient(circle at 75% 20%, rgba(126, 120, 255, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbfcff 0%, #f2f7ff 100%);
 
   /* Spacing System */
   --space-1: 4px;
@@ -227,9 +228,10 @@ html {
 body {
   font-family: var(--font-family);
   background:
-    radial-gradient(circle at 20% 20%, rgba(31, 103, 216, 0.08), transparent 28%),
-    radial-gradient(circle at 80% 0%, rgba(56, 189, 248, 0.08), transparent 25%),
-    linear-gradient(180deg, #f8fbfe 0%, #edf3f8 100%);
+    radial-gradient(circle at 20% 20%, rgba(22, 134, 234, 0.1), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(255, 107, 43, 0.09), transparent 25%),
+    radial-gradient(circle at 72% 72%, rgba(126, 120, 255, 0.08), transparent 26%),
+    linear-gradient(180deg, #fbfcff 0%, #eef5ff 100%);
   color: var(--text-primary);
   line-height: var(--line-height-normal);
   overflow: hidden; /* Prevent body scroll, let containers handle it */
@@ -254,8 +256,9 @@ body {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 15% 10%, rgba(31, 103, 216, 0.15), transparent 24%),
-    radial-gradient(circle at 82% 24%, rgba(56, 189, 248, 0.12), transparent 20%),
+    radial-gradient(circle at 15% 10%, rgba(22, 134, 234, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 24%, rgba(255, 107, 43, 0.12), transparent 20%),
+    radial-gradient(circle at 62% 80%, rgba(126, 120, 255, 0.1), transparent 22%),
     var(--gradient-subtle);
   position: relative;
 }

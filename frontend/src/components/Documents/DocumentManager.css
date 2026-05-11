@@ -7,8 +7,9 @@
   flex-direction: column;
   height: 100%;
   background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.05), transparent 18%),
-    radial-gradient(circle at 15% 10%, rgba(31, 103, 216, 0.05), transparent 20%),
+    radial-gradient(circle at top right, rgba(255, 107, 43, 0.08), transparent 18%),
+    radial-gradient(circle at 15% 10%, rgba(22, 134, 234, 0.07), transparent 20%),
+    radial-gradient(circle at 78% 82%, rgba(126, 120, 255, 0.05), transparent 18%),
     var(--bg-app);
   animation: fadeIn 0.2s ease-out;
   overflow: hidden;
@@ -18,8 +19,8 @@
 
 /* Header */
 .document-header {
-  background: rgba(255, 255, 255, 0.84);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 250, 255, 0.88));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.86);
   padding: var(--space-4) var(--space-6); /* Reduced vertical padding for more space */
   display: flex;
   justify-content: space-between;
@@ -53,13 +54,13 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
-  background: var(--bg-hover);
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.07), rgba(255, 107, 43, 0.04));
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
 }
 
 .stat-item:hover {
-  background: var(--primary-light);
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.12), rgba(255, 107, 43, 0.08));
   transform: translateY(-2px);
 }
 
@@ -135,8 +136,8 @@
 
 /* Bulk Actions Bar */
 .bulk-actions-bar {
-  background: linear-gradient(135deg, rgba(31, 103, 216, 0.14), rgba(56, 189, 248, 0.08));
-  border-bottom: 1px solid rgba(31, 103, 216, 0.16);
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.14), rgba(255, 107, 43, 0.08));
+  border-bottom: 1px solid rgba(22, 134, 234, 0.16);
   padding: var(--space-3) var(--space-6);
   display: flex;
   justify-content: space-between;
@@ -202,7 +203,7 @@
 /* Selection Header */
 .selection-header {
   padding: var(--space-2) var(--space-6);
-  background: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 255, 0.84));
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
@@ -235,7 +236,7 @@
 /* Filters */
 .document-filters {
   padding: var(--space-4) var(--space-6);
-  background: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 255, 0.84));
   border-bottom: 1px solid var(--border-color);
   animation: fadeIn 0.5s ease-out 0.1s backwards;
   backdrop-filter: blur(16px);
@@ -253,7 +254,7 @@
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
   transition: all var(--transition-base);
-  background: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.92));
 }
 
 .search-input:focus {
@@ -302,7 +303,7 @@
 }
 
 .category-option {
-  background: rgba(255, 255, 255, 0.88);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 255, 0.88));
   border: 2px solid var(--border-color);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-full);
@@ -358,7 +359,7 @@
 }
 
 .document-grid::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .document-grid::-webkit-scrollbar-thumb {
@@ -424,8 +425,8 @@
 
 .document-card,
 .document-skeleton {
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 255, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(16px);
 }
 

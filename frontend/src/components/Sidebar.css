@@ -5,7 +5,7 @@
 .sidebar {
   width: var(--sidebar-width);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 251, 255, 0.82));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.88));
   border-right: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
@@ -41,13 +41,13 @@
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
   cursor: pointer;
-  background: linear-gradient(135deg, rgba(31, 103, 216, 0.06), rgba(56, 189, 248, 0.04));
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.08), rgba(255, 107, 43, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: var(--shadow-sm);
 }
 
 .sidebar-logo:hover {
-  background: linear-gradient(135deg, rgba(31, 103, 216, 0.09), rgba(56, 189, 248, 0.08));
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.12), rgba(255, 107, 43, 0.08));
   transform: translateX(4px) translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -147,10 +147,10 @@
 }
 
 .sidebar-item:hover {
-  background: rgba(31, 103, 216, 0.08);
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.1), rgba(255, 107, 43, 0.06));
   color: var(--text-primary);
   transform: translateX(4px);
-  border-color: rgba(31, 103, 216, 0.08);
+  border-color: rgba(22, 134, 234, 0.1);
 }
 
 .sidebar-item:hover::before {
@@ -158,11 +158,11 @@
 }
 
 .sidebar-item.active {
-  background: linear-gradient(135deg, rgba(31, 103, 216, 0.14), rgba(56, 189, 248, 0.08));
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.16), rgba(126, 120, 255, 0.1));
   color: var(--primary-700);
   font-weight: var(--font-weight-semibold);
-  border-color: rgba(31, 103, 216, 0.12);
-  box-shadow: 0 8px 18px rgba(31, 103, 216, 0.08);
+  border-color: rgba(22, 134, 234, 0.14);
+  box-shadow: 0 10px 22px rgba(22, 134, 234, 0.08);
 }
 
 .sidebar-item.active::before {
@@ -224,7 +224,7 @@
 /* User Section */
 .sidebar-user {
   padding: var(--space-4);
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(31, 103, 216, 0.05));
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.06), rgba(255, 107, 43, 0.04));
   border-radius: var(--radius-md);
   margin-top: auto;
   display: flex;
@@ -237,7 +237,7 @@
 }
 
 .sidebar-user:hover {
-  background: linear-gradient(135deg, rgba(31, 103, 216, 0.08), rgba(56, 189, 248, 0.05));
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.1), rgba(255, 107, 43, 0.06));
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }

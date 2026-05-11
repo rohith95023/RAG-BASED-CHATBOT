@@ -6,8 +6,9 @@
   min-width: 0;
   min-height: 0;
   background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.06), transparent 18%),
-    radial-gradient(circle at 12% 10%, rgba(31, 103, 216, 0.05), transparent 20%);
+    radial-gradient(circle at top right, rgba(255, 107, 43, 0.08), transparent 18%),
+    radial-gradient(circle at 12% 10%, rgba(22, 134, 234, 0.07), transparent 20%),
+    radial-gradient(circle at 84% 80%, rgba(126, 120, 255, 0.06), transparent 22%);
 }
 
 .page-hero {
@@ -29,7 +30,7 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-lg);
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--primary) 0%, #6ce6ff 52%, var(--accent) 100%);
   color: white;
   display: grid;
   place-items: center;
@@ -105,8 +106,8 @@
 
 .stat-card,
 .section-card {
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 251, 255, 0.84));
+  border: 1px solid rgba(255, 255, 255, 0.84);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(18px);
@@ -185,8 +186,8 @@
   align-items: center;
   padding: var(--space-4);
   border-radius: var(--radius-md);
-  background: rgba(31, 103, 216, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, rgba(22, 134, 234, 0.06), rgba(255, 107, 43, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.82);
 }
 
 .settings-card-grid {
@@ -244,7 +245,7 @@
   gap: 6px;
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-full);
-  background: var(--primary-light);
+  background: linear-gradient(135deg, var(--primary-light), rgba(255, 107, 43, 0.08));
   color: var(--primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
@@ -259,7 +260,7 @@
   padding: var(--space-5);
   border: 1px dashed var(--border-color);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(247, 250, 255, 0.78));
 }
 
 .toggle {
@@ -315,7 +316,7 @@
 .setting-select {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.92));
   color: var(--text-primary);
   padding: 0.6rem 0.8rem;
   min-width: 180px;
