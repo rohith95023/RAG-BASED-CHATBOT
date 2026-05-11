@@ -520,7 +520,7 @@ Here is a simple list of the main libraries and where they are used.
 ### Database Area
 
 - `motor` - async MongoDB driver.
-- `pymongo` - MongoDB client library used for database work.
+- `pymongo` - MongoDB client library used for database work
 - `mongodb atlas` - cloud database service used to store app data.
 
 ### AI and Search Area

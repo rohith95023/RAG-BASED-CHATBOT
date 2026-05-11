@@ -335,25 +335,6 @@ const Chat = ({ selectedDocumentIds = [] }) => {
     setError(null);
   };
 
-  const handleSuggestionClick = (suggestion) => {
-    setInput(suggestion);
-    messagesContainerRef.current?.querySelector('textarea')?.focus();
-  };
-
-  const suggestions = chatMode === 'gemini'
-    ? [
-      'Explain this concept simply',
-      'Draft a professional email',
-      'Help me plan a project',
-      'Analyze the image I attach',
-    ]
-    : [
-      'What are the main topics in these documents?',
-      'Summarize the key findings across documents',
-      'What are the important dates mentioned?',
-      'Explain the methodology used',
-    ];
-
   const characterCount = input.length;
   const maxCharacters = 2000;
   const statusText = chatMode === 'gemini'
@@ -423,18 +404,6 @@ const Chat = ({ selectedDocumentIds = [] }) => {
                 ? 'Your selected documents are active. Questions will be grounded in those files.'
                 : 'No specific documents selected, so document mode searches all uploaded PDFs.'}
           </p>
-          <div className="chat-empty-suggestions">
-            {suggestions.map((suggestion, index) => (
-              <button
-                key={index}
-                className="chat-empty-suggestion"
-                onClick={() => handleSuggestionClick(suggestion)}
-                type="button"
-              >
-                <span className="chat-empty-suggestion-text">{suggestion}</span>
-              </button>
-            ))}
-          </div>
         </div>
       )}
 
