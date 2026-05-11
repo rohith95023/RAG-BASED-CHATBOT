@@ -431,7 +431,6 @@ const Chat = ({ selectedDocumentIds = [] }) => {
                 onClick={() => handleSuggestionClick(suggestion)}
                 type="button"
               >
-                <span className="chat-empty-suggestion-icon">?</span>
                 <span className="chat-empty-suggestion-text">{suggestion}</span>
               </button>
             ))}
