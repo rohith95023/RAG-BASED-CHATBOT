@@ -1,0 +1,207 @@
+/* ============================================
+   APP COMPONENT STYLES
+   ============================================ */
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: var(--gradient-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-app);
+  overflow: hidden;
+  position: relative;
+  min-width: 0; /* Prevents flex items from overflowing */
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Ensure all direct children of main-content don't overflow horizontally */
+.main-content > * {
+  max-width: 100%;
+}
+
+/* Page Transitions */
+.page-transition-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  min-width: 0; /* Prevents flex items from overflowing */
+  min-height: 0; /* Allows proper scrolling */
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading States */
+.app-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg-app);
+}
+
+.app-loading-logo {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-8);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.app-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Error States */
+.app-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.app-error-icon {
+  font-size: 64px;
+  margin-bottom: var(--space-6);
+  animation: shake 0.5s ease-in-out;
+}
+
+.app-error-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.app-error-message {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.app-error-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.app-error-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+.app-error-button:active {
+  transform: translateY(0);
+}
+
+/* View Container */
+.view-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-error {
+    padding: var(--space-6);
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .app-error-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .app-error-message {
+    font-size: var(--font-size-sm);
+  }
+
+  .app-container {
+    flex-direction: column;
+  }
+}
+
+/* Global overflow fixes */
+* {
+  box-sizing: border-box;
+  max-width: 100%; /* Prevent elements from overflowing */
+}
+
+/* Ensure buttons and inputs don't overflow */
+button, input, textarea, select {
+  max-width: 100%;
+}
+
+/* Fix for long text content */
+.word-break {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
